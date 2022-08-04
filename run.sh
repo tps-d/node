@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "======== docker containers logs file size ========"  
+echo "======== docker containers logs file size ========" >>/root/run.log
 
 logs=$(find /var/lib/docker/containers/ -name *-json.log)  
 
@@ -8,7 +8,7 @@ for log in $logs
         do  
              ls -lh $log   
         done
- echo "======== start clean docker containers logs ========"  
+echo "======== start clean docker containers logs ========"  >>/root/run.log
 
 logs=$(find /var/lib/docker/containers/ -name *-json.log)  
 
@@ -18,4 +18,5 @@ for log in $logs
                 cat /dev/null > $log  
         done  
 
-echo "======== end clean docker containers logs ========"
+echo "======== end clean docker containers logs ========" >>/root/run.log
+cat /root/run.log
