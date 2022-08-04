@@ -6,7 +6,7 @@ logs=$(find /var/lib/docker/containers/ -name *-json.log)
 
 for log in $logs  
         do  
-             ls -lh $log   
+             du -b $log
         done
 echo "======== start clean docker containers logs ========"  >>/root/run.log
 
