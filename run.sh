@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo "======== docker containers logs file size ========"  
 
 logs=$(find /var/lib/docker/containers/ -name *-json.log)  
