@@ -26,5 +26,5 @@ if [ "$mode" -eq "ping" ]; then
    echo "$ip"
 
 
-if
+fi
 tail -n 50 /root/run.log
