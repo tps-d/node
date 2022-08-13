@@ -1,7 +1,6 @@
 #!/bin/sh
 echo -n "enter mode:"
 read mode
-
 if ["$mode" -eq "clear"]; then
 echo "======== docker containers logs file size ========" >>/root/run.log
 logs=$(find /var/lib/docker/containers/ -name *-json.log)  
