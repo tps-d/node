@@ -147,8 +147,8 @@ case $ACTION in
         for ip in ${all_ip_address[@]}
         do {
             ping -c1 -s1 $ip 2>&1 1>/dev/null &&
-            echo -e ping $ip is "\033[32;49;1m online！ \033[39;49;0m" || 
-            echo -e ping $ip is "\033[31;49;1m offline！ \033[39;49;0m"
+            echo -e ping -c 2 $ip is "\033[32;49;1m online！ \033[39;49;0m" || 
+            echo -e ping -c 2 $ip is "\033[31;49;1m offline！ \033[39;49;0m"
         } &
         done
         wait
